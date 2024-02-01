@@ -1,0 +1,70 @@
+{% load static %}
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static '/styles.css'%}">
+       
+        <!---
+
+       <script>
+        
+        
+
+        function Hide()
+            {
+                if(document.getElementById('hide_btn').options[document.getElementById('hide_btn').selectedIndex].value=="1")
+                {
+                    document.getElementById('btn1').style.display='none';
+                }
+                else if(document.getElementById('hide_btn').options[document.getElementById('hide_btn').selectedIndex].value=='2')
+                {
+                    document.getElementById('btn2').style.display='none';
+                }
+                else if(document.getElementById('hide_btn').options[document.getElementById('hide_btn').selectedIndex].value=="3")
+                {
+                    document.getElementById('btn3').style.display='none';
+                }
+                else if(document.getElementById('hide_btn').options[document.getElementById('hide_btn').selectedIndex].value=="4")
+                {
+                    document.getElementById('btn4').style.display='none';
+                }
+                else if(document.getElementById('hide_btn').options[document.getElementById('hide_btn').selectedIndex].value=="5")
+                {
+                    document.getElementById('btn5').style.display='none';
+                }
+            } 
+
+            
+        </script>
+        --->
+        
+    </head>
+    <body class = "homeScreen">
+        <div class = "allButtons">
+        <form  action = "" method = "post">
+            {%csrf_token%}
+            <button id = "btn1" type = "submit" value = "hello" name = "btn"> Hello </button>
+            <button id = "btn2" type = "submit" value = "i am hungry" name = "btn"> Hungry </button>
+            <button id = "btn3" type = "submit" value = "how are you" name = "btn"> How are you? </button>
+            <button id = "btn4" type = "submit" value = "school" name = "btn"> School </button>
+            <button id = "btn5" type = "submit" value = "home" name = "btn"> Home </button>
+            
+            {% for button_data in buttons_obj %}
+            <button type = "submit" value = "{{button_data.audio_text}}" name = "btn"> {{button_data.button_text}} </button>
+            {% endfor %}
+
+            <!--- <select id = "hide_btn" name = "hide" onchange = "Hide()"> 
+                <option value = "">--</option>
+                <option value = "1">1</option>
+                <option value = "2">2</option>
+                <option value = "3">3</option>
+                <option value = "4">4</option>
+                <option value = "5">5</option>
+            </select> --->
+        </form>
+    </div>
+
+        <button class = "addNewButton"> <a href = "{%url 'show_form' %}"> + </a> </button>
+
+    </body>
+</html>

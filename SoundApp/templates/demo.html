@@ -1,0 +1,26 @@
+{% load static %}
+<html lang="en">
+<head>
+    
+    <title>Login/Signup</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/styles.css'%}">
+  
+</head>
+
+<body class = "backgroundImage">
+    
+    <div class = "headingAndFormDiv">
+    <h1 class = "landingPageHeading" style = "color:white"> 
+        Soundboard
+    </h1>
+    
+    <div class = "cont">
+        <button class = "loginButton"> <a href = "{% url 'login' %}"> Login </a></button>
+        <button class = "loginButton"><a href = "{% url 'signup' %}"> Sign-Up</a></button>
+    </div>
+ </div>
+
+</body>
+
+</body>
+</html>

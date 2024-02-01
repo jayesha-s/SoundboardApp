@@ -1,0 +1,167 @@
+
+h1{
+    color:black;
+    text-align: center;
+}
+
+.landingPageHeading{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.headingAndFormDiv{
+    text-align: center;
+}
+
+.cont body{
+    text-align: center;
+    background-color: white;
+}
+
+.allButtons{
+    text-align:center;
+}
+
+.cont{
+    border: 2px solid white;
+    background-image: linear-gradient(65deg, black, transparent);
+    border-radius: 10px;
+    height: 120px;
+    width : 500px;
+    margin: auto;
+    padding: 20px; 
+    text-align: center;
+}
+
+.loginButton{
+    height: 100px;
+    width: 200px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color:red;
+    margin-top: 5px; 
+    box-shadow: 6px 6px 7px gray;
+
+}
+.cont a{
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.loginButton:hover{
+    background-color: lightcoral;
+}
+
+.loginForm{
+    border: 2px dashed white;
+    border-radius: 5px;
+    padding: 15px;
+    width: 40%;
+    padding-bottom: 10px;
+    margin-left: 30%;
+    text-align: center;
+}
+
+.loginFormDiv{
+    padding: 50px;
+}
+
+.loginFormDiv h1{
+    text-align: center;
+    color: white;
+}
+
+.allButtons button{
+    background-color: lightskyblue;
+    border-radius: 20px;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 50px;
+    margin: 5%;
+}
+
+.allButtons button:hover{
+    background-color: lightblue;
+}
+
+
+.addNewButton{
+    background-color: lightpink;
+    border-radius: 20px;
+    height: 100px;
+    width: 100px;
+    padding: 5px;
+    margin-left: 90%;
+}
+
+.addNewButton a{
+    text-decoration: none;
+    font-size: 80px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.addNewButton a:hover{
+    color: white;
+}
+
+
+
+.addNewButton:hover{
+    background-color: rgb(255, 217, 223);
+}
+
+.loginForm input, label{
+    margin-bottom: 5px;
+    color: white;
+    font-size: large;
+    border-radius: 1px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.backgroundImage{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(65deg, black, transparent), url("https://media.istockphoto.com/id/1338344327/photo/female-teacher-helping-african-school-girl-using-tablet-at-class-in-classroom.jpg?s=612x612&w=0&k=20&c=5T_2tfXwzWB7Mndj1CilbOMnNCgQ0pe0_UHT2PGbHMA=")
+}
+
+.submitButton{
+    background-color: rgb(67, 67, 67);
+    height: 30px;
+    width: 70px;
+}
+
+.homeScreen{
+    background-image: linear-gradient(50deg, rgb(67, 86, 126), transparent);
+}
+
+.buttonForm input, label{
+    margin-bottom: 5px;
+    color: black;
+    font-size: large;
+    border-radius: 1px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.buttonFormDiv{
+    margin-left: 40%;
+    background-color: pink;
+    text-align: center;
+    margin-top: 10%;
+    width: 350px;
+    padding: 20px;
+    border: 2px dashed rgb(163, 19, 19);
+}
+
+
+.submitButton2{
+    background-color: rgb(181, 110, 110);
+    height: 30px;
+    width: 70px;
+}
+
+.buttonFormBackground{
+    background-image: linear-gradient(50deg, rgb(188, 113, 113), transparent);
+}

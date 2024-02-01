@@ -1,0 +1,56 @@
+{% load static %}
+
+
+<html>
+   <head>
+        <link rel="stylesheet" type="text/css" href="{% static '/styles.css'%}">
+       <script>
+       function show_option(){
+           //Changed this function to bounce off show_opt in div box
+           let text_section = document.getElementById("text_to_speech_section");
+           let text =  document.getElementById("text_to_speech");
+           if(document.getElementById('show_opt').options[document.getElementById('show_opt').selectedIndex].value=="text")
+           {
+               //var inputText = document.createElement("input"); //input element, text
+               //inputText.setAttribute('type',"text");
+               //f.append(inputText);
+               text_section.style.display = "block";
+           }else{
+               text_section.style.display = "none";
+               text.value = null;
+           }
+          
+       }
+       </script>
+   </head>
+   <body class = "buttonFormBackground">
+ 
+       <!-- Add action -->
+       <div class = "buttonFormDiv">
+        <h1>
+            New Button
+        </h1>
+       <form class = "buttonForm" id = "f" name = "f" method="post" action = "{% url 'insert_text' %}">
+           {%csrf_token%} <!--Added this token-->
+           <label > Enter Button Name: </label>
+           <input type = "text" name = "btn_name" required> <!--Add required-->
+           <br>
+         
+           <label> Enter the option to select text/sound: </label>
+           <select id = "show_opt" onchange = "show_option()">
+               <option value = "--"> -- </option>
+               <option value = "text">Text</option>
+           </select>
+           <br>
+           <!--Added Section and button-->
+           <div id = "text_to_speech_section" style = "display:none;">
+           <label> Enter the text: </label>
+           <input type = "text" id = "text_to_speech" name = "text_to_speech">
+           </div>  
+           <br>
+           <input class = "submitButton2" type="submit" value="Submit">
+           <!---->
+       </form>
+        </div>
+   </body>
+</html>

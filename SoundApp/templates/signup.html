@@ -1,0 +1,25 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static '/styles.css'%}">
+    </head>
+    <body class = backgroundImage>
+        <div class = "loginFormDiv">
+            <h1>
+                Signup
+            </h1>
+            
+        <form class = "loginForm" method="post" action = "{% url 'signup_user' %}">
+            {%csrf_token%}
+
+            <label>Username:</label>
+            <input type="text" name="username"><br>
+            <label>Password:</label>
+            <input type="password" name="password"><br>
+            <input class = "submitButton" type="submit" value="Submit">
+        
+
+        </form>
+    </div>
+    </body>
+</html>
